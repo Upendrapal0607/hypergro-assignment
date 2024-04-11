@@ -4,14 +4,14 @@ import { getSingSongSong } from "../Utils/GetSongList";
 import ReactPlayer from "react-player";
 import { VideoDataType } from "../Interfaces/Interface";
 import { Loader } from "./Loader";
-export const VedioPlayer = () => {
+export const Playvedio = () => {
   const [loading,setLoad] = useState(false)
   let { postId } = useParams();
   const [post, setPost] = useState<VideoDataType | null>(null);
   const GetSingePost = async () => {
     setLoad(true)
     if (postId) {
-      let page: number = 1;
+    let page: number = 1;
 const storedPage = localStorage.getItem("page");
 if (storedPage !== null) {
   page = +JSON.parse(storedPage) || 1; 
@@ -30,10 +30,10 @@ if (storedPage !== null) {
     GetSingePost();
   }, [postId]);
 
-  return loading ? (
+  return !post?(
     <Loader />
   ) :(
-    <div className="flex justify-center flex-row h-[100%] text-white box-border">
+    <div className="flex justify-center flex-row h-[100%] text-black box-border">
       <div className="w-full flex flex-col">
         <div className="flex flex-col w-[100%] px-4 py-3 lg:py-6 overflow-y-auto box-border">
           <div className="h-[200px] md:h-[400px] lg:h-[400px] xl:h-[550px] ml-[-16px] lg:ml-0 mr-[-16px] lg:mr-0">
@@ -73,7 +73,7 @@ if (storedPage !== null) {
         <div className="mt-[-10px] sm:w-[70%] w-[80%] pb-4 text-black text-left px-4 box-border">
           {post?.submission?.description}
         </div>
-      </div>
+      </div> 
     </div>
   );
 };

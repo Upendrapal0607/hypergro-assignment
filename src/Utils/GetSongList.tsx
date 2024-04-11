@@ -4,7 +4,6 @@ const url = "https://internship-service.onrender.com/videos";
 export const getSong = async (page: number) => {
   try {
     let result = await axios.get(`${url}?page=${page}`).then((res) => res);
-    console.log({ result: result?.data });
     return result?.data;
   } catch (error) {
     return { message: "Error accurce", error };

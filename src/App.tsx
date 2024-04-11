@@ -5,6 +5,7 @@ import Navbar from "./Components/Header";
 import { AllRoute } from "./Routes/AllRoute";
 import Footer from "./Components/Footer";
 
+
 function App() {
   return (
     <div className="App">

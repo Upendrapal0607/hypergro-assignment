@@ -18,9 +18,9 @@ export const SongPage = () => {
     } else {
       alert("some error accurse try again Later");
     }
-    console.log({ responseData });
+  
   };
-  console.log({ data });
+ 
 
   useEffect(() => {
     FetchData();
