@@ -3,23 +3,26 @@ import { useParams } from "react-router-dom";
 import { getSingSongSong } from "../Utils/GetSongList";
 import ReactPlayer from "react-player";
 import { VideoDataType } from "../Interfaces/Interface";
+import { Loader } from "./Loader";
 export const VedioPlayer = () => {
+  const [loading,setLoad] = useState(false)
   let { postId } = useParams();
   const [post, setPost] = useState<VideoDataType | null>(null);
-  console.log({ post });
-
   const GetSingePost = async () => {
+    setLoad(true)
     if (postId) {
-      let page = +postId[postId.length - 1] || 0;
-      let postIdWithoutPage: string =
-        postId?.substring(0, postId.length - 1) || "";
-      let singlePost = await getSingSongSong(postIdWithoutPage, page);
-      console.log({ InsideIf: singlePost });
+      let page: number = 1;
+const storedPage = localStorage.getItem("page");
+if (storedPage !== null) {
+  page = +JSON.parse(storedPage) || 1; 
+}
+
+      let singlePost = await getSingSongSong(postId, page);
       setPost(singlePost[0]);
+      setLoad(false)
     } else {
       let singlePost = await getSingSongSong(postId, 0);
       setPost(singlePost[0]);
-      console.log({ insideElse: singlePost });
     }
   };
 
@@ -27,7 +30,9 @@ export const VedioPlayer = () => {
     GetSingePost();
   }, [postId]);
 
-  return (
+  return loading ? (
+    <Loader />
+  ) :(
     <div className="flex justify-center flex-row h-[100%] text-white box-border">
       <div className="w-full flex flex-col">
         <div className="flex flex-col w-[100%] px-4 py-3 lg:py-6 overflow-y-auto box-border">
@@ -66,7 +71,7 @@ export const VedioPlayer = () => {
         </div>
 
         <div className="mt-[-10px] sm:w-[70%] w-[80%] pb-4 text-black text-left px-4 box-border">
-          {post?.submission.description}
+          {post?.submission?.description}
         </div>
       </div>
     </div>

@@ -11,12 +11,10 @@ export const getSong = async (page: number) => {
   }
 };
 export const getSingSongSong = async (id: any, page: number) => {
-  console.log(id);
-
   try {
     let result = await axios.get(`${url}/?page=${page}`).then((res) => res);
     return result?.data?.data?.posts?.filter((post: any) => post.postId == id);
   } catch (error) {
-    return { message: "Error accurce", error };
+    return { message: "Error accurce", error};
   }
 };

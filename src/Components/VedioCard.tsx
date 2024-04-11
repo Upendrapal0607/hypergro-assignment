@@ -8,8 +8,9 @@ interface VedioCardProps {
 }
 
 export const VedioCard: React.FC<VedioCardProps> = ({ post, page }) => {
+  localStorage.setItem("page",JSON.stringify(page))
   return (
-    <Link to={`/vedio/${post.postId}${page}`}>
+    <Link to={`/vedio/${post.postId}`}>
       <div className="flex flex-col mb-8">
         <div className="relative h-[300px] md:h-[350px] sm:h-[400px] rounded-xl overflow-hidden">
           <img
