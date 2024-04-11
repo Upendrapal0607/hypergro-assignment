@@ -1,8 +1,8 @@
 # Title
-
 ## Vedio player app
-
 This innovative project aims to provide music enthusiasts with an immersive experience, allowing them to not only listen the music but also visually videos, creating a harmonious fusion of auditory and visual delight.
+![hyper-gro](https://github.com/Upendrapal0607/hypergro-assignment/assets/112810287/8f429439-3e55-4181-831e-ff1d40a538e4)
+
 
 ## How to run project locally
 
