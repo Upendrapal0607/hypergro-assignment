@@ -21,7 +21,7 @@ In the project directory, you can run:
 Runs the app in the locally
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Deploy link: [Live](https://lighthearted-mermaid-e60f3f.netlify.app/)
+Deploy link: [Live](https://hypergro-assignment-nu.vercel.app/)
 
 Project Presentation Video: [Video](https://drive.google.com/file/d/1sx_gYODs7Tz4pYK6wXhUjtr1KK6ZZgi1/view?usp=sharing)
 

@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="mt-8 md:mt-0 md:order-1">
             <p className="text-center text-base text-gray-400">
               &copy; Copyright 2024 hypergro. All rights reserved | Design by :
-              greenmentor.
+              hypergro.
             </p>
           </div>
         </div>
