@@ -23,7 +23,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Deploy link: [Live](https://hypergro-assignment-nu.vercel.app/)
 
-Project Presentation Video: [Video](https://drive.google.com/file/d/1sx_gYODs7Tz4pYK6wXhUjtr1KK6ZZgi1/view?usp=sharing)
+Project Presentation Video: [Video](https://drive.google.com/file/d/1U2n0i6EdZ-UIoGga02R63xW0CojECwxl/view?usp=sharing)
 
 # Technology Stack
 
