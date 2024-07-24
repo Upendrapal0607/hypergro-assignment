@@ -21,7 +21,7 @@ In the project directory, you can run:
 Runs the app in the locally
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Deploy link: [Live](https://hypergro-assignment-nu.vercel.app/)
+Deploy link: [Live](https://hypergro-assignment-three.vercel.app/)
 
 Project Presentation Video: [Video](https://drive.google.com/file/d/1U2n0i6EdZ-UIoGga02R63xW0CojECwxl/view?usp=sharing)
 
